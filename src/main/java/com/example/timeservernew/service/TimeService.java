@@ -15,12 +15,8 @@ import java.util.TimeZone;
 public class TimeService {
 
     public String getTime() {
-//      Date date = new Date();
-//      return date.toString();
         Instant utcTime = Instant.now();
         return utcTime.toString();
-//      String finalTime = utcTime.toString();
-//      return finalTime;
     }
 
     public Long getEpochTime() {
@@ -28,11 +24,6 @@ public class TimeService {
         return date.getTime();
     }
 
-//    public String getTimeZone() {
-//        LocalDateTime timeInZone = LocalDateTime.now(TimeZone.getTimeZone("America/Chicago").toZoneId());
-//        System.out.println("Time in Chicago: " + timeInZone);
-//        return timeInZone.toString();
-//    }
 
     public String getTimeZone(String timeZone) {
         TimeZone zone = TimeZone.getTimeZone(timeZone);
@@ -58,5 +49,3 @@ public class TimeService {
     }
 }
 
-//hw: create 2 new endpts:
-//2. Create a new endpt that takes in a time zone and returns the time in that time zone.
